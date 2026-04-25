@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "advanced-resume-reviewer"
+version = "0.1.0"
+description = "A local Python resume reviewer with ATS, impact, readability, and role-fit analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Codex" }]
+license = { text = "MIT" }
+keywords = ["resume", "ats", "career", "review", "python"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+resume-reviewer = "resume_reviewer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
