@@ -1,0 +1,29 @@
+Jordan Patel
+jordan.patel@example.com | 555-010-1212 | linkedin.com/in/jordanpatel | github.com/jordanpatel
+
+Summary
+Senior Python engineer with 7 years of experience building data platforms, APIs, and automation systems for finance and SaaS teams.
+
+Skills
+Python, FastAPI, Flask, PostgreSQL, Redis, Docker, AWS, Terraform, Airflow, Pandas, CI/CD, REST APIs, Microservices
+
+Professional Experience
+Senior Software Engineer | Northstar Analytics | Jan 2021 - Present
+- Built Python data validation service processing 45M daily records and reduced downstream incident volume by 38%.
+- Led migration from batch cron jobs to Airflow DAGs, cutting manual operations by 12 hours per week.
+- Optimized PostgreSQL queries and indexing strategy, improving dashboard load times from 9 seconds to 1.8 seconds.
+- Mentored 4 engineers and introduced code review checklists that reduced escaped defects by 22%.
+
+Software Engineer | BrightLedger | Jun 2018 - Dec 2020
+- Created Flask APIs for billing workflows used by 120K customers across three product lines.
+- Automated reconciliation reports with Pandas and SQL, saving finance analysts 16 hours each month.
+- Shipped Docker-based local development environment and reduced onboarding setup time from 2 days to 3 hours.
+
+Projects
+- Designed open-source resume parser prototype using Python, regex extraction, and ranked keyword matching.
+
+Education
+B.S. Computer Science, University of Maryland, 2018
+
+Certifications
+AWS Certified Developer - Associate

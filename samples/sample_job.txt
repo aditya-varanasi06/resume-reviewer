@@ -1,0 +1,3 @@
+Senior Backend Python Engineer
+
+We are looking for a senior backend engineer to build scalable Python services and data workflows. The role requires Python, FastAPI, PostgreSQL, AWS, Docker, Terraform, APIs, distributed systems, CI/CD, and strong ownership. Experience with Airflow, data pipelines, observability, and mentoring is preferred.
