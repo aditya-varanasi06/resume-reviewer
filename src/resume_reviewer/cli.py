@@ -13,6 +13,18 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Review a resume for ATS, impact, clarity, and role fit.")
     parser.add_argument("resume", help="Path to resume file: txt, md, pdf, or docx.")
     parser.add_argument("--job", help="Optional path to a target job description.")
+    parser.add_argument(
+        "--role",
+        choices=["software_engineer", "backend", "frontend", "ml", "data"],
+        default="software_engineer",
+        help="Target role profile for role-specific feedback.",
+    )
+    parser.add_argument(
+        "--level",
+        choices=["fresher", "experienced", "senior"],
+        default="experienced",
+        help="Experience level for tuning expectations.",
+    )
     parser.add_argument("--format", choices=["markdown", "json"], default="markdown", help="Output format.")
     parser.add_argument("--output", help="Optional output file path.")
     return parser
@@ -28,7 +40,7 @@ def main(argv: list[str] | None = None) -> int:
         parser.error(str(exc))
         return 2
 
-    report = ResumeReviewer().review(resume_text, job_text)
+    report = ResumeReviewer().review(resume_text, job_text, role=args.role, experience_level=args.level)
     rendered = render_json(report) if args.format == "json" else render_markdown(report)
     if args.output:
         Path(args.output).write_text(rendered, encoding="utf-8")
