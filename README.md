@@ -48,20 +48,67 @@ The web app includes:
 
 The project is now deploy-ready through the WSGI entrypoint in `app.py`.
 
-### Easiest Option: Render
+## Vercel
+Follow these steps to deploy this project using Vercel:
 
-1. Push this folder to a GitHub repository.
-2. Go to Render and create a new **Web Service** from that repository.
-3. Use these settings:
+### 1. Install Vercel CLI (optional)
 
-```text
-Runtime: Python
-Build Command: pip install -r requirements.txt
-Start Command: gunicorn app:application
+```bash
+npm install -g vercel
 ```
 
-4. Deploy. Render will give you a public `https://...onrender.com` URL.
+### 2. Push your project to GitHub
 
+Make sure your project is in a Git repository and pushed:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <your-repo-url>
+git push -u origin main
+```
+
+### 3. Deploy via Vercel Dashboard (recommended)
+
+1. Go to [https://vercel.com](https://vercel.com)
+2. Sign in with your GitHub / GitLab / Bitbucket account
+3. Click **"New Project"**
+4. Import your repository
+5. Configure project settings (if needed):
+
+   * Framework preset (Next.js, React, etc.)
+   * Environment variables
+6. Click **Deploy**
+
+### 4. Deploy via CLI (alternative)
+
+Run the following inside your project folder:
+
+```bash
+vercel
+```
+
+Then follow the prompts:
+
+* Link to existing project or create new
+* Select scope
+* Confirm settings
+
+### 5. Production Deployment
+
+To deploy to production:
+
+```bash
+vercel --prod
+```
+
+Once deployed, Vercel will provide a live URL like:
+
+```
+https://your-project-name.vercel.app
+```
 ### Other Hosts
 
 Any Python host that supports WSGI can run it with:
