@@ -1,4 +1,4 @@
-"""Advanced resume reviewer package."""
+"""ATS resume score analyzer package."""
 
 from .analyzer import ResumeReviewer
 from .models import ReviewReport
